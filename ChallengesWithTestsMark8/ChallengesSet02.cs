@@ -7,7 +7,20 @@ namespace ChallengesWithTestsMark8
     {
         public bool CharacterIsALetter(char c)
         {
-            throw new NotImplementedException();
+            //var a = char.ToLower(c);
+            //var alphabet = new char[] { 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v','w', 'x', 'y', 'z' };
+            //for(int i = 0; i < alphabet.Length; i++)
+            //{
+            //    if (alphabet[i] == char.ToLower(c))
+            //    {
+            //        return true;
+            //    }
+
+            //}
+            //return false;
+
+            return char.IsLetter(c);
+            
         }
 
         public bool CountOfElementsIsEven(string[] vals)
