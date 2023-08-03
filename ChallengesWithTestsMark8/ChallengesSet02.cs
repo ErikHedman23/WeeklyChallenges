@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
+using System.Net.Sockets;
 
 namespace ChallengesWithTestsMark8
 {
@@ -78,27 +80,71 @@ namespace ChallengesWithTestsMark8
 
         public int GetLengthOfShortestString(string str1, string str2)
         {
-            throw new NotImplementedException();
+
+            return (str1.Length < str2.Length) ? str1.Length : str2.Length;
+            //if (str1.Length < str2.Length)
+            //{
+            //    return str1.Length;
+            //}
+            //else
+            //{
+            //    return str2.Length;
+            //}
         }
 
         public int Sum(int[] numbers)
         {
-            throw new NotImplementedException();
+            
+            {
+                if (numbers == null || numbers.Length == 0)
+                {
+                    return 0;
+                }
+            }
+            
+            
+            return numbers.Sum();
         }
 
         public int SumEvens(int[] numbers)
         {
-            throw new NotImplementedException();
+            int sum = 0;
+            if(numbers == null)
+            {
+                return 0;
+            }
+
+            foreach (int num in numbers)
+            {
+                if (num % 2 == 0)
+                {
+                    sum += num;
+                } 
+                
+              
+            }
+            return sum;
+            //return sum;
         }
 
         public bool IsSumOdd(List<int> numbers)
         {
-            throw new NotImplementedException();
+            return (numbers == null) ? false : (numbers.Sum() % 2 != 0);
         }
 
         public long CountOfPositiveOddsBelowNumber(long number)
         {
-            throw new NotImplementedException();
+            var count = 0;
+            for (long i = number - 1; i > 0; i--)
+            {
+                if (i % 2 != 0)
+                {
+                    count++;
+                }
+            }
+            return count;
+
+            
         }
     }
 }
